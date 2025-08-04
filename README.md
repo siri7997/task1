@@ -1,6 +1,8 @@
 
 🔐 Cybersecurity Internship – Task 1
+
 📌 Task: Scan Your Local Network for Open Ports
+
 This repository contains files and documentation for Task 1 of my Cybersecurity Internship, focusing on basic network reconnaissance. The goal is to use Nmap to scan the local network for open ports and identify potential vulnerabilities based on discovered services.
 
 🛠 Tools Used
