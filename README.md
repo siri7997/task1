@@ -12,33 +12,59 @@ Wireshark (optional) – for packet analysis
 
 🧪 Commands Used
 1️⃣ TCP SYN Scan (Human-readable output)
+
 nmap -sS 192.168.68.0/24 -oN nmap_scan_results.txt
+
 2️⃣ XML Output for HTML Conversion (Optional)
+
 nmap -sS 192.168.68.0/24 -oX scan.xml
+
 3️⃣ Save All Formats at Once
+
 nmap -sS 192.168.68.0/24 -oA myscan
+
 4️⃣ Convert XML to HTML (Optional)
+
 xsltproc scan.xml -o scan.html
+
 ⚠️ Replace 192.168.68.0/24 with your actual local IP range.
 
 📁 Repository Contents
+
 File Name	Description
+
 nmap_scan_results.txt	Human-readable Nmap scan output
+
 services_and_risks.md	List of open ports and potential vulnerabilities
+
 scan.xml (optional)	XML-format scan output
+
 scan.html (optional)	HTML report converted from XML
+
 README.md	This documentation
+
 📋 Example Nmap Output Summary
+
 PORT     STATE SERVICE
+
 135/tcp  open  msrpc
+
 139/tcp  open  netbios-ssn
+
 445/tcp  open  microsoft-ds
+
 ⚠️ Risks Identified from Open Ports
+
 Port	Service	Protocol	Description
+
 135	msrpc	TCP	Microsoft RPC – vulnerable to remote RCE
+
 139	netbios-ssn	TCP	NetBIOS – info leakage, file access risks
+
 445	microsoft-ds	TCP	SMB – exploited by ransomware (e.g., WannaCry)
+
 🔍 Risk Analysis
+
 🔓 Port 135 – msrpc
 Purpose: Windows RPC services
 
